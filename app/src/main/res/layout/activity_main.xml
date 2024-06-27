@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/blutooth"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/bluetooth_24dp_fill0_wght400_grad0_opsz24"
+            app:civ_border_overlay="true"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnWiFi"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/blutooth"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/wifi_24dp_fill0_wght400_grad0_opsz24"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btnintenet"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toRightOf="@id/btnWiFi"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/sync_alt_24dp_fill0_wght400_grad0_opsz24"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:civ_circle_background_color="@color/black" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/airoplanmode"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/btnintenet"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/flight_24dp_fill0_wght400_grad0_opsz24"
+            android:tint="@color/white"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/flashlighton"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/airoplanmode"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/flashlight_on_24dp_fill0_wght400_grad0_opsz24"
+            android:tint="@color/white"
+            app:tint="@color/white" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/more"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+
+            android:backgroundTint="@color/black"
+            android:src="@drawable/more_horiz_24dp_fill0_wght400_grad0_opsz24"
+            android:tint="@color/white"
+            app:tint="@color/white" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btn_low"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/light_mode_24dp_fill0_wght400_grad0_opsz24" />
+
+        <ImageButton
+            android:id="@+id/btn_medium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+
+            android:src="@drawable/brightness_6_24dp_fill0_wght400_grad0_opsz24" />
+
+        <ImageButton
+            android:id="@+id/btn_high"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:src="@drawable/brightness_7_24dp_fill0_wght400_grad0_opsz24" />
+
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="128" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brightness: 50%" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/black"
+            android:src="@drawable/play_circle_24dp_fill0_wght400_grad0_opsz24"
+            android:tint="@color/white"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
